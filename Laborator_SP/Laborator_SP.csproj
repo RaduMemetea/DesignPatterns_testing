@@ -46,6 +46,7 @@
     <Compile Include="Clase\Author.cs" />
     <Compile Include="Clase\Book.cs" />
     <Compile Include="Clase\Chapter.cs" />
+    <Compile Include="Clase\Element.cs" />
     <Compile Include="Clase\Image.cs" />
     <Compile Include="Clase\Paragraph.cs" />
     <Compile Include="Clase\SubChapter.cs" />

@@ -1,12 +1,16 @@
-﻿namespace Laborator_SP.Clase
+﻿using System;
+
+namespace Laborator_SP.Clase
 {
-    public class Paragraph
+    public class Paragraph:Element
     {
-        public string Name { get; private set; }
-        public Paragraph(string name)
+        public Paragraph(string name):base(name)
         {
-            Name = name;
         }
 
+        public override void print()
+        {
+            Console.WriteLine("Paragraph: {0}",Name);
+        }
     }
 }

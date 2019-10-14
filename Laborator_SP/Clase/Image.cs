@@ -1,11 +1,16 @@
-﻿namespace Laborator_SP.Clase
+﻿using System;
+
+namespace Laborator_SP.Clase
 {
-    public class Image
+    public class Image : Element
     {
-        public string Name { get; private set; }
-        public Image(string name)
+        public Image(string name):base(name)
         {
-            Name = name;
+        }
+
+        public override void print()
+        {
+            Console.WriteLine("Image: {0}",Name);
         }
     }
 }

@@ -1,12 +1,16 @@
-﻿namespace Laborator_SP.Clase
+﻿using System;
+
+namespace Laborator_SP.Clase
 {
-    public class Table
+    public class Table:Element
     {
-        public string Name { get; private set; }
-        public Table(string name)
+        public Table(string name):base(name)
         {
-            Name = name;
         }
 
+        public override void print()
+        {
+            Console.WriteLine("Table: {0}",Name);
+        }
     }
 }

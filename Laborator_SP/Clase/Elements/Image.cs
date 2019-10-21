@@ -4,11 +4,13 @@ namespace Laborator_SP.Clase
 {
     public class Image : Element
     {
-        public Image(string name):base(name)
+        protected String Name { get; set; }
+        public Image(string name)
         {
+            Name = name;
         }
 
-        public override void print()
+        public void Print()
         {
             Console.WriteLine("Image: {0}",Name);
         }

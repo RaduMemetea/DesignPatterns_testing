@@ -11,24 +11,26 @@ namespace Laborator_SP
     {
         static void Main(string[] args)
         {
-            Book Titanic = new Book("Titanic");
-            Author author = new Author("Raul Pavel");
-            Titanic.addAuthor(author);
+            Book noapteBuna = new Book("Noapte buna, copii!");
+            Author author = new Author("Radu Pavel Gheo");
+            noapteBuna.addAuthor(author);
 
-            int indexOfChapter = Titanic.createChapter("Chapter One");
-            Chapter chapter = Titanic.getChapter(indexOfChapter);
+            Section cap1 = new Section("Chapter 1");
+            Section cap11 = new Section("Chapter 1.1");
+            Section cap111 = new Section("Chapter 1.1.1");
+            Section cap1111 = new Section("SubChapter 1.1.1.1.1");
 
-            int indexOfSubChapter = chapter.createSubChapter("Chapter One-One");
-            SubChapter subChapter = chapter.getSubChapter(indexOfSubChapter);
+            noapteBuna.addContent(  new Paragraph("Paragraph 1"),
+                                    cap1,
+                                    new Paragraph("Paragraph 2"),
+                                    cap11,
+                                    new Paragraph("Paragraph 3"),
+                                    cap111,
+                                    new Paragraph("Paragraph 4"),
+                                    cap1111,
+                                    new Image("Image 1"));
+            noapteBuna.Print();
 
-            int indexOfParagraph = subChapter.createParagraph("Paragraph One");
-            int indexOfImage = subChapter.createImage("Image One");
-            subChapter.createParagraph("Paragraph Forth");
-            int indexOfTable = subChapter.createTable("Table One");
-            subChapter.createParagraph("Paragraph Two");
-            subChapter.createParagraph("Paragraph Three");
-
-            subChapter.print();
             Console.WriteLine();
 
             Console.ReadKey();

@@ -7,32 +7,37 @@ namespace Laborator_SP.Clase
     {
         public string Name { get; private set; }
         public List<Author> Authors { get; private set; }
-        public List<Chapter> Chapters { get; private set; }
+        public List<Element> Sections { get; private set; }
 
         public Book(String name)
         {
             Name = name;
             Authors = new List<Author>();
-            Chapters = new List<Chapter>();
+            Sections = new List<Element>();
         }
         public void addAuthor(Author author)
         {
             Authors.Add(author);
         }
-        private void addChapter(Chapter chapter)
-        {
-            Chapters.Add(chapter);
-        }
 
-        public int createChapter(string ChapterName)
+        public void addContent(Element element)
         {
-            Chapter chapter = new Chapter(ChapterName);
-            addChapter(chapter);
-            return Chapters.IndexOf(chapter);
+            Sections.Add(element);
         }
-        public Chapter getChapter(int index)
+        public void addContent(params Element[] element)
         {
-            return Chapters[index];
+            Sections.AddRange(element);
+        }
+        public void Print()
+        {
+            Console.WriteLine("Book: {0}", Name);
+            Console.WriteLine("Authors:");
+            foreach (var item in Authors)
+                Console.WriteLine("Author: {0}",item.Name);
+            Console.WriteLine();
+
+            foreach (var item in Sections)
+                item.Print();
         }
     }
 }

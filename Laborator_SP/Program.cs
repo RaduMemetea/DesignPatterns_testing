@@ -1,16 +1,17 @@
 ﻿using Laborator_SP.Clase;
+using Laborator_SP.Clase.Elements;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Laborator_SP
 {
     class Program
     {
+        public static object StopWatch { get; private set; }
+
         static void Main(string[] args)
         {
+            /*
             Book noapteBuna = new Book("Noapte buna, copii!");
             Author author = new Author("Radu Pavel Gheo");
             noapteBuna.addAuthor(author);
@@ -20,7 +21,7 @@ namespace Laborator_SP
             Section cap111 = new Section("Chapter 1.1.1");
             Section cap1111 = new Section("SubChapter 1.1.1.1.1");
 
-            noapteBuna.addContent(  new Paragraph("Paragraph 1"),
+            noapteBuna.addContent(new Paragraph("Paragraph 1"),
                                     cap1,
                                     new Paragraph("Paragraph 2"),
                                     cap11,
@@ -33,6 +34,37 @@ namespace Laborator_SP
 
             Console.WriteLine();
 
+            Console.ReadKey();
+
+*/
+
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+            long startTime = 0;
+            ImageProxy img1 = new ImageProxy("Pamela Anderson");
+            ImageProxy img2 = new ImageProxy("Kim Kardashian");
+            ImageProxy img3 = new ImageProxy("Kirby Griffin");
+
+            Section playboyS1 = new Section("Front Cover");
+            playboyS1.Add(img1);
+            Section playboyS2 = new Section("Summer Girls");
+            playboyS2.Add(img2);
+            playboyS2.Add(img3);
+            Book playboy = new Book("Playboy");
+            playboy.addContent(playboyS1);
+            playboy.addContent(playboyS2);
+
+            long endTime = watch.ElapsedMilliseconds;
+            Console.WriteLine("Creation of the content took " + (endTime - startTime) + " milliseconds");
+
+            startTime = watch.ElapsedMilliseconds;
+            playboyS1.Print();
+            endTime = watch.ElapsedMilliseconds;
+            Console.WriteLine("Printing of the section 1 took " + (endTime - startTime) + " milliseconds");
+            startTime = watch.ElapsedMilliseconds;
+            playboyS1.Print();
+            endTime = watch.ElapsedMilliseconds;
+            Console.WriteLine("Printing again the section 1 took " + (endTime - startTime) + " milliseconds");
             Console.ReadKey();
         }
     }

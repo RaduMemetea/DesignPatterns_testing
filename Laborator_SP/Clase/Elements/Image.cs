@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Laborator_SP.Clase
 {
@@ -8,6 +9,7 @@ namespace Laborator_SP.Clase
         public Image(string name)
         {
             Name = name;
+            Thread.Sleep(5000);
         }
 
         public void Print()

@@ -5,6 +5,7 @@ namespace Laborator_SP.Clase
     public class Paragraph : Element
     {
         protected String Name { get; set; }
+        private AlignStrategy align;
 
         public Paragraph(string name)
         {
@@ -13,7 +14,14 @@ namespace Laborator_SP.Clase
 
         public void Print()
         {
-            Console.WriteLine("Paragraph: {0}", Name);
+            if(align!=null)
+               align.print(Name);
+            else
+               Console.WriteLine("Paragraph: {0}", Name);
+        }
+        public setAlignStrategy(AlignStrategy Al)
+        {
+            align =Al;
         }
     }
 }

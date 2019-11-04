@@ -11,7 +11,7 @@ namespace Laborator_SP.Clase
             Name = name;
         }
 
-        public void Print()
+        public void print()
         {
             Console.WriteLine("Table: {0}", Name);
         }

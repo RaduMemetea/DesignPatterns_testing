@@ -14,7 +14,7 @@ namespace Laborator_SP.Clase
             Name = name;
             Content = new List<Element>();
         }
-        public void Add(Element element)
+        public void add(Element element)
         {
             Content.Add(element);
         }
@@ -27,11 +27,11 @@ namespace Laborator_SP.Clase
         {
             return Content[index];
         }
-        public void Print()
+        public void print()
         {
             Console.WriteLine("{0}",Name);
             foreach (var item in Content)
-                item.Print();
+                item.print();
         }
     }
 }

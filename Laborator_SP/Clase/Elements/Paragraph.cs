@@ -5,23 +5,23 @@ namespace Laborator_SP.Clase
     public class Paragraph : Element
     {
         protected String Name { get; set; }
-        private AlignStrategy align;
+        private AlingnStrategy alingn;
 
         public Paragraph(string name)
         {
             Name = name;
         }
 
-        public void Print()
+        public void print()
         {
-            if(align!=null)
-               align.print(Name);
+            if (alingn == null)
+                Console.WriteLine($"Paragraph: {Name}");
             else
-               Console.WriteLine("Paragraph: {0}", Name);
+                alingn.print(Name);
         }
-        public setAlignStrategy(AlignStrategy Al)
+        public void setAlignStrategy(AlingnStrategy alingn)
         {
-            align =Al;
+            this.alingn = alingn;
         }
     }
 }

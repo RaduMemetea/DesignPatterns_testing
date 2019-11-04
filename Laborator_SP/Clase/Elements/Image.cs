@@ -12,7 +12,7 @@ namespace Laborator_SP.Clase
             Thread.Sleep(5000);
         }
 
-        public void Print()
+        public void print()
         {
             Console.WriteLine("Image: {0}",Name);
         }

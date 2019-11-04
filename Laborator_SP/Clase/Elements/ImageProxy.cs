@@ -14,12 +14,12 @@ namespace Laborator_SP.Clase.Elements
             Image = null;
         }
 
-        public void Print()
+        public void print()
         {
             if (Image == null)
                 Image = new Image(imageName);
 
-            Image.Print();
+            Image.print();
         }
     }
 }

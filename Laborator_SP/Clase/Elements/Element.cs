@@ -2,6 +2,6 @@
 {
     public interface Element
     {
-        public void Print();
+        public void print();
     }
 }

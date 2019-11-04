@@ -37,7 +37,7 @@ namespace Laborator_SP.Clase
             Console.WriteLine();
 
             foreach (var item in Sections)
-                item.Print();
+                item.print();
         }
     }
 }

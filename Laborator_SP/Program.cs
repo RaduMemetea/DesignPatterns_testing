@@ -1,7 +1,5 @@
 ﻿using Laborator_SP.Clase;
-using Laborator_SP.Clase.Elements;
 using System;
-using System.Diagnostics;
 
 namespace Laborator_SP
 {
@@ -68,6 +66,7 @@ namespace Laborator_SP
             Console.WriteLine("Printing again the section 1 took " + (endTime - startTime) + " milliseconds");
             Console.ReadKey();
             */
+            /*
             Section cap1 = new Section("Capitolul 1");
             Paragraph p1 = new Paragraph("Paragraph 1");
             cap1.add(p1);
@@ -87,6 +86,29 @@ namespace Laborator_SP
             Console.WriteLine("Printing with Alignment");
             Console.WriteLine();
             cap1.print();
+            Console.ReadKey();
+            */
+
+            Section cap1 = new Section("Capitolul 1");
+            Paragraph p1 = new Paragraph("Paragraph 1");
+            cap1.add(p1);
+            Paragraph p2 = new Paragraph("Paragraph 2");
+            cap1.add(p2);
+            Paragraph p3 = new Paragraph("Paragraph 3");
+            cap1.add(p3);
+            Paragraph p4 = new Paragraph("Paragraph 4");
+            cap1.add(p4);
+            cap1.add(new ImageProxy("ImageOne"));
+            cap1.add(new Image("ImageTwo"));
+            cap1.add(new Paragraph("Some text"));
+            cap1.add(new Table("Table 1"));
+            BookStatistics stats = new BookStatistics();
+            cap1.accept(stats);
+            stats.printStatistics();
+            FinancialBook finalBook = new FinancialBook();
+            cap1.accept(finalBook);
+            finalBook.getStatisitcs();
+
             Console.ReadKey();
         }
     }

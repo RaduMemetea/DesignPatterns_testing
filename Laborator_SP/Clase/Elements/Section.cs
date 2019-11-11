@@ -33,5 +33,13 @@ namespace Laborator_SP.Clase
             foreach (var item in Content)
                 item.print();
         }
+
+        public void accept(Visitor visitor)
+        {
+            foreach (var item in Content)
+            {
+                item.accept(visitor);
+            }
+        }
     }
 }

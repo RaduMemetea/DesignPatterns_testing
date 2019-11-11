@@ -23,5 +23,10 @@ namespace Laborator_SP.Clase
         {
             this.alingn = alingn;
         }
+
+        public void accept(Visitor visitor)
+        {
+            visitor.visit(this);
+        }
     }
 }

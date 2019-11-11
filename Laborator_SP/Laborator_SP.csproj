@@ -47,16 +47,19 @@
   <ItemGroup>
     <Compile Include="Clase\Author.cs" />
     <Compile Include="Clase\Book.cs" />
+    <Compile Include="Clase\BookStatistics.cs" />
     <Compile Include="Clase\Elements\Element.cs" />
     <Compile Include="Clase\Elements\Image.cs" />
     <Compile Include="Clase\Elements\ImageProxy.cs" />
     <Compile Include="Clase\Elements\Paragraph.cs" />
     <Compile Include="Clase\Elements\Section.cs" />
     <Compile Include="Clase\Elements\Table.cs" />
+    <Compile Include="Clase\FinancialBook.cs" />
     <Compile Include="Clase\PrintStrategy\AlignCenter.cs" />
     <Compile Include="Clase\PrintStrategy\AlignLeft.cs" />
     <Compile Include="Clase\PrintStrategy\AlignRight.cs" />
     <Compile Include="Clase\PrintStrategy\AlignStrategy.cs" />
+    <Compile Include="Clase\Visitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

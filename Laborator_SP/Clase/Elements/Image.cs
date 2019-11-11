@@ -16,5 +16,10 @@ namespace Laborator_SP.Clase
         {
             Console.WriteLine("Image: {0}",Name);
         }
+
+        public void accept(Visitor visitor)
+        {
+            visitor.visit(this);
+        }
     }
 }

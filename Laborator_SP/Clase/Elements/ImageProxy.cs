@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Laborator_SP.Clase.Elements
+namespace Laborator_SP.Clase
 {
-    class ImageProxy : Element
+    public class ImageProxy : Element
     {
 
         private string imageName { get; set; }
@@ -20,6 +20,11 @@ namespace Laborator_SP.Clase.Elements
                 Image = new Image(imageName);
 
             Image.print();
+        }
+
+        public void accept(Visitor visitor)
+        {
+            visitor.visit(this);
         }
     }
 }

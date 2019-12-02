@@ -35,6 +35,9 @@
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,9 +51,18 @@
     <Compile Include="Clase\Author.cs" />
     <Compile Include="Clase\Book.cs" />
     <Compile Include="Clase\BookStatistics.cs" />
+    <Compile Include="Clase\Command\Command.cs" />
+    <Compile Include="Clase\Command\OpenCommand.cs" />
+    <Compile Include="Clase\Command\SaveCommand.cs" />
+    <Compile Include="Clase\Command\StatisticsCommand.cs" />
     <Compile Include="Clase\Elements\Element.cs" />
     <Compile Include="Clase\Elements\Image.cs" />
     <Compile Include="Clase\Elements\ImageProxy.cs" />
+    <Compile Include="Clase\Observer\DefaulObserver.cs" />
+    <Compile Include="Clase\Observer\FirstObserver.cs" />
+    <Compile Include="Clase\Observer\Observable.cs" />
+    <Compile Include="Clase\Observer\Observer.cs" />
+    <Compile Include="Clase\Observer\SecondObserver.cs" />
     <Compile Include="Clase\Elements\Paragraph.cs" />
     <Compile Include="Clase\Elements\Section.cs" />
     <Compile Include="Clase\Elements\Table.cs" />
@@ -60,11 +72,13 @@
     <Compile Include="Clase\PrintStrategy\AlignRight.cs" />
     <Compile Include="Clase\PrintStrategy\AlignStrategy.cs" />
     <Compile Include="Clase\Visitor.cs" />
+    <Compile Include="DocumentManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

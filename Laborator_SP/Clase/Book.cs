@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace Laborator_SP.Clase
@@ -15,6 +16,17 @@ namespace Laborator_SP.Clase
             Authors = new List<Author>();
             Sections = new List<Element>();
         }
+        [JsonConstructor]
+        public Book(String n, List<Author> a, List<Element> e)
+        {
+            Name = n;
+            Authors = a;
+            Sections = e;
+        }
+        public Book()
+        {
+        }
+
         public void addAuthor(Author author)
         {
             Authors.Add(author);

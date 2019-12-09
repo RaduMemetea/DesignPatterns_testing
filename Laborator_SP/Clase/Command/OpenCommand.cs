@@ -19,6 +19,12 @@ namespace Laborator_SP.Clase
             ttt();
             DocumentManager.Instance.setBook(book);
         }
+
+        public void unexecute()
+        {
+            throw new NotImplementedException();
+        }
+
         void ttt()
         {
             Book noapteBuna = new Book("Noapte buna, copii!");

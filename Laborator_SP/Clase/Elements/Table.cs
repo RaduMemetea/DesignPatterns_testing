@@ -51,5 +51,9 @@ namespace Laborator_SP.Clase
             notifyObservers();
         }
 
+        public Element copy()
+        {
+            return new Table(Name);
+        }
     }
 }

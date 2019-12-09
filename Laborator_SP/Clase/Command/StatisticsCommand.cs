@@ -22,5 +22,10 @@ namespace Laborator_SP.Clase
             bookStatistics.printStatistics();
            
         }
+
+        public void unexecute()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

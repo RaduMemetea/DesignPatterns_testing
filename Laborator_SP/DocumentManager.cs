@@ -1,5 +1,7 @@
 ﻿using Laborator_SP.Clase;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Laborator_SP
 {
@@ -27,5 +29,9 @@ namespace Laborator_SP
             book = v;
             
         }
+
+        public Stack<Command> stackUndo { get; set; } = new Stack<Command>();
+        public Stack<Command> stackRedo { get; set; } = new Stack<Command>();
+
     }
 }

@@ -53,5 +53,9 @@ namespace Laborator_SP.Clase
                 Image.setNewValue(newValue);
         }
 
+        public Element copy()
+        {
+            return Image.copy();
+        }
     }
 }

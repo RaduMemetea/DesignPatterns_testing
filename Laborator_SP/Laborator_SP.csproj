@@ -52,6 +52,9 @@
     <Compile Include="Clase\Book.cs" />
     <Compile Include="Clase\BookStatistics.cs" />
     <Compile Include="Clase\Command\Command.cs" />
+    <Compile Include="Clase\Command\DeleteCommand.cs" />
+    <Compile Include="Clase\Command\RedoCommand.cs" />
+    <Compile Include="Clase\Memento.cs" />
     <Compile Include="Clase\Command\OpenCommand.cs" />
     <Compile Include="Clase\Command\SaveCommand.cs" />
     <Compile Include="Clase\Command\StatisticsCommand.cs" />
@@ -75,6 +78,7 @@
     <Compile Include="DocumentManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Clase\Command\UndoCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

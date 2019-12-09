@@ -6,22 +6,19 @@ using System.Threading.Tasks;
 
 namespace Laborator_SP.Clase
 {
-    class SaveCommand : Command
+    class RedoCommand : Command
     {
-        string vv;
-        public SaveCommand(string v)
-        {
-            vv = v;
-        }
-
+        Command command;
         public void execute()
         {
-            throw new NotImplementedException();
+            command = DocumentManager.Instance.stackRedo.Pop();
+            command.execute();
+            DocumentManager.Instance.stackUndo.Push(command);
         }
 
         public void unexecute()
         {
-            throw new NotImplementedException();
+            command.unexecute();
         }
     }
 }

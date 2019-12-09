@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Laborator_SP.Clase
 {
 
-    class Section : Element, Observable
+    public class Section : Element, Observable
     {
         public string Name { get; private set; }
         public String oldName { get; private set; }
@@ -84,5 +84,12 @@ namespace Laborator_SP.Clase
             notifyObservers();
         }
 
+        public Element copy()
+        {
+            Section section = new Section(Name);
+            foreach (var item in Content)
+                section.add(item.copy());
+            return section;
+        }
     }
 }

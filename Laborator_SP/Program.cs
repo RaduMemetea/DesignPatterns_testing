@@ -120,7 +120,7 @@ namespace Laborator_SP
             Console.WriteLine();
             DocumentManager.Instance.getBook().Print();
             */
-
+            /*
             Section cap1 = new Section("Capitolul 1");
             Paragraph p1 = new Paragraph("Paragraph 1");
             cap1.add(p1);
@@ -142,6 +142,37 @@ namespace Laborator_SP
             
             cap1.setNewValue("CHAPTER 1.1");
 
+    */
+            Section cap1 = new Section("Capitolul 1");
+            cap1.add(new Paragraph("Moto capitol"));
+            cap1.add(new Paragraph("Another One"));
+            cap1.add(new Paragraph("Another Two"));
+            cap1.add(new Paragraph("Another Three"));
+            Book book = new Book("Carte");
+            book.addContent(cap1);
+
+            DocumentManager.Instance.setBook(book);
+            Console.WriteLine("Book Content: ");
+            DocumentManager.Instance.getBook().Print();
+
+            new DeleteCommand().execute();
+            Console.WriteLine( "--------Book Content after the first delete: ");
+            DocumentManager.Instance.getBook().Print();
+            new DeleteCommand().execute();
+            Console.WriteLine( "--------Book Content after the second delete: ");
+            DocumentManager.Instance.getBook().Print();
+            Command undoCommand = new UndoCommand();
+            Command redoCommand = new RedoCommand();
+            undoCommand.execute();
+            Console.WriteLine("--------Book Content after first undo: ");
+            DocumentManager.Instance.getBook().Print();
+            redoCommand.execute();
+            Console.WriteLine("--------Book Content after first redo: ");
+            DocumentManager.Instance.getBook().Print();
+            undoCommand.execute();
+            Console.WriteLine( "--------Book Content after second undo: ");
+            DocumentManager.Instance.getBook().Print();
+            
 
             Console.ReadKey();
 
